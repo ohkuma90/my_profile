@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  # root "articles#index"
+  root "profiles#index"
 end
