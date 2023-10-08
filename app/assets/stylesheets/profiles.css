@@ -1,0 +1,43 @@
+.card {
+  background-color: coral;
+  height: 700px;
+  width: 100%;
+  padding: 10px 10px;
+}
+
+.card-top {
+  background-color: rgb(255, 213, 249);
+  height: 208px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  border-radius: 5%;
+  display: flex;
+}
+
+.top-left {
+  height: 100%;
+  width: 50%;
+  background-color: rgb(173, 235, 233);;
+}
+
+.top-right {
+  height: 100%;
+  width: 50%;
+  background-color: rgb(109, 210, 207);;
+}
+
+.card-main {
+  background-color: rgb(255, 213, 249);
+  height: 208px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  border-radius: 5%;
+}
+
+.card-bottom {
+  background-color: rgb(255, 213, 249);
+  height: 184px;
+  margin: 0 auto;
+  border-radius: 5%;
+}
