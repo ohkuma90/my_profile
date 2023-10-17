@@ -1,24 +1,52 @@
-# README
+# テーブル設計
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## usersテーブル
 
-Things you may want to cover:
+| Column             | Type    | Options                    |
+| ------------------ | ------- | -------------------------- |
+| name               | string  | null: false                |
+| email              | string  | null: false , unique: true |
+| encrypted_password | string  | null: false                |
+| x_id               | string  | null: false                |
+| birth              | integer | null: false                |
+| nickname           | string  | null: false                |
+| favorite_food      | string  | null: false                |
+| hated_food         | string  | null: false                |
+| holiday            | string  | null: false                |
+| hobby              | string  | null: false                |
+| first_band         | string  | null: false                |
+| first_live         | string  | null: false                |
 
-* Ruby version
+### Association
 
-* System dependencies
+- has_many :books
+- hes_many :cards, through: :books
 
-* Configuration
 
-* Database creation
+## cardsテーブル
 
-* Database initialization
+| Column | Type       | Options                       |
+| ------ | ---------- | ----------------------------- |
+| live   | string     | null: false                   |
+| rank1  | string     | null: false                   |
+| rank2  | string     | null: false                   |
+| rank3  | string     | null: false                   |
+| user   | references | null:false, foreign_key: true |
 
-* How to run the test suite
+### Association
 
-* Services (job queues, cache servers, search engines, etc.)
+- has_many :books
+- hes_many :users, through: :books
 
-* Deployment instructions
 
-* ...
+## purchases テーブル
+
+| Column      | Type       | Options                       |
+| ----------- | ---------- | ----------------------------- |
+| card        | references | null:false, foreign_key: true |
+| user        | references | null:false, foreign_key: true |
+
+### Association
+
+- belongs_to :card
+- belongs_to :user
